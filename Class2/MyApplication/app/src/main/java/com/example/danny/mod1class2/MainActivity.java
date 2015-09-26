@@ -1,60 +1,45 @@
-package com.example.danny.mod1class1;
+package com.example.danny.mod1class2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-public class HomeActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
+
+    private EditText txtEnterText;
+    private Button btnExecute;
+    private TextView lblResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        Log.d("TAG", "onCreate");
-    }
-
-    @Override
-    protected void onStart(){
-        super.onStart();
-        Log.d("TAG", "onStart");
+        setContentView(R.layout.activity_main);
+        //Link xml to java
+        txtEnterText = (EditText)findViewById(R.id.txtEnterText);
+        btnExecute = (Button)findViewById(R.id.btnExecute);
+        lblResult = (TextView)findViewById(R.id.lblResult);
     }
 
     @Override
     protected void onResume(){
         super.onResume();
-        Log.d("TAG", "onResume");
-    }
-
-    @Override
-    protected void onPause(){
-        super.onPause();
-        Log.d("TAG", "onPause");
-    }
-
-    @Override
-    protected void onStop(){
-        super.onStop();
-        Log.d("TAG", "onStop");
-    }
-
-    @Override
-    protected void onRestart(){
-        super.onRestart();
-        Log.d("TAG", "onRestart");
-    }
-
-    @Override
-    protected void onDestroy(){
-        super.onDestroy();
-        Log.d("TAG", "onDestroy");
+        btnExecute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lblResult.setText("Hello " + txtEnterText.getText().toString() + "!!!");
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_home, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

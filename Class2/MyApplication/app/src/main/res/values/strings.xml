@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mod1Class2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="mainTxt_EnterText">Enter Text</string>
+    <string name="mainBtn_Execute">Execute</string>
+</resources>
