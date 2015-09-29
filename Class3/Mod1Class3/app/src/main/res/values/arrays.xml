@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="beverages">
+        <item>Choose</item>
+        <item>Beer</item>
+        <item>Water bottle</item>
+        <item>Orange Juice</item>
+        <item>Coffee</item>
+    </string-array>
+</resources>

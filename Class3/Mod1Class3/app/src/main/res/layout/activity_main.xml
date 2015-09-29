@@ -59,4 +59,21 @@
             android:text="@string/main_execute_button_text"
             android:background="@color/main_blue"/>
     </LinearLayout>
+    <Spinner
+        android:id="@+id/spBeverages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/beverages"></Spinner>
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_show_text"/>
+
+    <TextView
+        android:id="@+id/lblSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
 </LinearLayout>

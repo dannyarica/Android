@@ -5,14 +5,21 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private LinearLayout llShow, llHide, llForm;
     private EditText txtEnterName;
-    private Button btnExecute;
+    private Button btnExecute, btnShow;
+    private Spinner spBeverages;
+    private TextView lblSpinner;
 
 
     @Override
@@ -26,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
         txtEnterName = (EditText)findViewById(R.id.txtEnterName);
 
         btnExecute = (Button)findViewById(R.id.btnExecute);
+        btnShow = (Button)findViewById(R.id.btnShow);
+        spBeverages = (Spinner)findViewById(R.id.spBeverages);
+
+        ArrayAdapter adapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(R.array.beverages));
+        spBeverages.setAdapter(adapter);
+
+        lblSpinner = (TextView)findViewById(R.id.lblSpinner);
     }
 
     @Override
@@ -41,6 +55,39 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 llForm.setVisibility(View.GONE);
+            }
+        });
+
+        btnExecute.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String myName = txtEnterName.getText().toString();
+                Toast.makeText(MainActivity.this,  myName, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        btnShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String myChoose = spBeverages.getSelectedItem().toString();
+                if (myChoose.compareToIgnoreCase(getResources().getString(R.string.main_default_spinner_choose))!=0){
+                    Toast.makeText(MainActivity.this, myChoose, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        spBeverages.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position > 0) {
+                    lblSpinner.setText(parent.getSelectedItem().toString());
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
     }

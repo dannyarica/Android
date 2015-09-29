@@ -7,4 +7,5 @@
     <string name="main_hide_text">Hide</string>
     <string name="main_enter_name_text">Enter name:</string>
     <string name="main_execute_button_text">Execute</string>
+    <string name="main_default_spinner_choose">Choose</string>
 </resources>
