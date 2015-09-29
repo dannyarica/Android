@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_height"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llShow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_height"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/main_red">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_show_text"/>
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/main_height"
+            android:background="@color/main_black"/>
+        <LinearLayout
+            android:id="@+id/llHide"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_height"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/main_red">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_hide_text"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <EditText
+            android:id="@+id/txtEnterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/main_enter_name_text"/>
+        <Button
+            android:id="@+id/btnExecute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/main_execute_button_text"
+            android:background="@color/main_blue"/>
+    </LinearLayout>
+</LinearLayout>
