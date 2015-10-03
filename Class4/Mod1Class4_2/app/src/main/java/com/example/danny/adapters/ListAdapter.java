@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 import com.example.danny.mod1class4_2.R;
 import com.example.danny.models.Contact;
 
@@ -43,15 +42,17 @@ public class ListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null){
             convertView = LayoutInflater.from(_context).inflate(R.layout.item_list, parent,false);
+            //ViewHolder.SetIntance(convertView);
+            //convertView.setTag();
         }
         TextView lblName = (TextView)convertView.findViewById(R.id.lblName);
         TextView lblLastName = (TextView)convertView.findViewById(R.id.lblLastName);
         TextView lblAge = (TextView)convertView.findViewById(R.id.lblAge);
 
         Contact myContact = getItem(position);
-        lblName.setText(myContact.Name);
-        lblLastName.setText(myContact.LastName);
-        lblAge.setText(String.valueOf(myContact.Age));
+        lblName.setText(myContact.getName());
+        lblLastName.setText(myContact.getLastName());
+        lblAge.setText(String.valueOf(myContact.getAge()));
 
         return convertView;
     }

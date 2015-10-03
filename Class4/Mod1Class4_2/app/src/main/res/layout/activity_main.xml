@@ -6,13 +6,35 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-
-    <ListView
-        android:id="@+id/lvwContacts"
+    <EditText
+        android:id="@+id/txtName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </ListView>
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="Enter Name"/>
+    <EditText
+        android:id="@+id/txtLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="Enter Last Name"/>
+    <EditText
+        android:id="@+id/txtAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Enter Age"/>
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"/>
+    <Button
+        android:id="@+id/btnShowContacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Contacts"/>
 </LinearLayout>
