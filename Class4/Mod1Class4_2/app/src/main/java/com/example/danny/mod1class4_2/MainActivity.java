@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
                     Contact myContact = Helper.ContactArrayList.get(myPosition);
                     populateData(myContact);
                     btnSave.setText("Update");
-                    Toast.makeText(MainActivity.this, "Contact loaded", Toast.LENGTH_SHORT).show();
                 }
             }
         }
@@ -59,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (btnSave.getText() == "Save") {
+                if (btnSave.getText().toString().equals("Save")) {
                     Helper.ContactArrayList.add(getContact(txtName.getText().toString(),
                             txtLastName.getText().toString(),
                             Integer.parseInt(txtAge.getText().toString())));
@@ -70,7 +69,9 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     Helper.ContactArrayList.get(myPosition).setName(txtName.getText().toString());
                     Helper.ContactArrayList.get(myPosition).setLastName(txtLastName.getText().toString());
-
+                    Helper.ContactArrayList.get(myPosition).setAge(Integer.parseInt(txtAge.getText().toString()));
+                    Toast.makeText(MainActivity.this, "Contact updated", Toast.LENGTH_SHORT).show();
+                    finish();
                 }
             }
         });
