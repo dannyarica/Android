@@ -1,6 +1,5 @@
 package com.example.danny.mod1class6_2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,11 +8,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.example.danny.adapter.GridAdapter;
-import com.example.danny.helper.Constantes;
 import com.example.danny.models.Cupon;
 
 import java.util.ArrayList;
@@ -21,7 +18,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private GridView gridView;
     private GridAdapter gridAdapter;
-    //private ArrayList<Cupon> cuponArrayList = new ArrayList<Cupon>();
+    private ArrayList<Cupon> cuponArrayList = new ArrayList<Cupon>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,26 +26,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         gridView = (GridView) findViewById(R.id.gvwCupon);
         populate();
-        gridAdapter = new GridAdapter(MainActivity.this, Constantes.cuponArrayList);
+        gridAdapter = new GridAdapter(MainActivity.this, cuponArrayList);
         gridView.setAdapter(gridAdapter);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(MainActivity.this, MostrarActivity.class);
-                intent.putExtra("position", position);
-                startActivity(intent);
-            }
-        });
     }
 
     private void populate() {
         for (int i = 1; i < 40; i++) {
-            Constantes.cuponArrayList.add(new Cupon(
+            cuponArrayList.add(new Cupon(
                     "Title #" + String.valueOf(i + 1),
                     "https://www.grouponworks.com/best-merchants-of-2012/img/badge-1500x1500.png"
             ));
