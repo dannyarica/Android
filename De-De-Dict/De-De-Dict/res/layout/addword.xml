@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:id="@+id/textView" android:layout_marginLeft="10dp" android:textSize="16sp"
+                    android:textStyle="bold"/>
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextName" android:layout_marginLeft="13dp" android:hint="vocabulary"/>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:id="@+id/textViewType" android:layout_gravity="center" android:layout_marginLeft="10dp"
+                    android:textSize="16sp" android:textStyle="bold"/>
+            <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerType" android:layout_marginLeft="13dp"/>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Plural"
+                    android:id="@+id/textView4" android:layout_gravity="center" android:layout_marginLeft="10dp"
+                    android:textSize="16sp" android:textStyle="bold"/>
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextPlural" android:layout_marginLeft="13dp" android:hint="plural"/>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Meaning"
+                    android:id="@+id/textView5" android:layout_gravity="center" android:layout_marginLeft="10dp"
+                    android:textSize="16sp" android:textStyle="bold"/>
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextMeaning" android:layout_marginLeft="13dp" android:lines="3"
+                    android:hint="meaning"/>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Synonym"
+                    android:id="@+id/textView7" android:layout_marginLeft="10dp" android:textSize="16sp"
+                    android:textStyle="bold"/>
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextSynonym" android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="13dp" android:lines="3" android:hint="synonym"/>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Example"
+                    android:id="@+id/textView8" android:layout_marginLeft="10dp" android:textSize="16sp"
+                    android:textStyle="bold"/>
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextExample" android:layout_marginLeft="13dp" android:lines="3"
+                    android:hint="example"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

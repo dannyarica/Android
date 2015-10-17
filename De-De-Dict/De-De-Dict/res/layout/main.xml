@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <AutoCompleteTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/autoCompleteTextView" android:layout_weight="9" android:hint="..."/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButtonSearch"
+                android:layout_gravity="center_vertical" android:background="@drawable/searchicon"/>
+    </LinearLayout>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nachhaltigkeit"
+            android:id="@+id/textViewName" android:layout_gravity="top" android:textStyle="bold" android:textSize="23sp"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Substantiv, f"
+            android:id="@+id/textViewType" android:layout_marginLeft="13dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bedeutungen"
+            android:id="@+id/textView2" android:textSize="19sp" android:textStyle="bold"
+            android:layout_marginLeft="13dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[1] Forstwirtschaft: Bewirtschaftungsweise eines Waldes, bei welcher immer nur so viel Holz entnommen wird, wie nachwachsen kann, so dass der Wald nie zur Gänze abgeholzt wird, sondern sich immer wieder regenerieren kann\n"
+            android:id="@+id/textViewMeaning" android:layout_marginLeft="23dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Synonyme"
+            android:id="@+id/textView4" android:layout_marginLeft="17dp" android:textStyle="bold"
+            android:textSize="19sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[2], [3], [4] Durchhaltefähigkeit\n [?] nachhaltige Entwicklung"
+            android:id="@+id/textViewSynonym" android:layout_marginLeft="23dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beispiele"
+            android:id="@+id/textView6" android:layout_marginLeft="17dp" android:textStyle="bold"
+            android:textSize="19sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[3] In der politischen Diskussion spielt Nachhaltigkeit zunehmend eine Rolle.\n [4] Die Nachhaltigkeit dieser Therapie konnte statistisch belegt werden."
+            android:id="@+id/textViewExample" android:layout_marginLeft="23dp"/>
+</LinearLayout>
+

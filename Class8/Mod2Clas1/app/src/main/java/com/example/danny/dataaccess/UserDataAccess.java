@@ -9,7 +9,7 @@ import com.example.danny.models.User;
 /**
  * Created by DArica on 14/10/2015.
  */
-public class UserDataAccess implements IUserDataAccess {
+public class UserDataAccess /*implements IUserDataAccess*/ {
 
     private SQLiteDatabase sqLiteDatabase;
 
