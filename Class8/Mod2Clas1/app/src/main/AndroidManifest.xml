@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.danny.mod1class6_2"
-    android:versionName="1.0"
-    android:versionCode="1">
-
-    <uses-sdk
-        android:maxSdkVersion="23"
-        android:minSdkVersion="8"
-        android:targetSdkVersion="23"
-        ></uses-sdk>
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    package="com.example.danny.mod2class1" >
 
     <application
-        android:name="com.example.danny.application.Configuration"
+        android:name="com.example.danny.aplication.Configuration"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,7 +12,6 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MostrarActivity" >
+        <activity android:name=".SignUpActivity" >
+        </activity>
+        <activity android:name=".WelcomeActivity" >
         </activity>
     </application>
 
